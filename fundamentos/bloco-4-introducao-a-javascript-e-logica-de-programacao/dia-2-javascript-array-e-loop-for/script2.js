@@ -4,5 +4,4 @@ let resultado= 0;
 for (index =0; index < numbers.length; index +=1) {
     resultado += numbers[index];
 }
-
 console.log(resultado);
