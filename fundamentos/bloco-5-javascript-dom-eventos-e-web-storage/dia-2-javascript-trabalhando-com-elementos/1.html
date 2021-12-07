@@ -9,7 +9,6 @@
         border-color: black;
         border-style: solid;
       }
-
       .title {
         text-align: center;
       }
@@ -57,56 +56,45 @@
   </head>
   <body>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
-      // 1
       let h1Elem= document.createElement('h1');
       h1Elem.innerText = 'Exercício 5.2 - JavaScript DOM';  
       document.body.appendChild(h1Elem);
 
-      // 2
       let mainElem= document.createElement('main');
-      mainElem.classList.add ('main-content');
-      document.body.appendChild(mainElem);
+      main.className= 'main-content';
+      document.body.appendChild(mainElem)
 
-      // 3
-      let section1= document.creatElement('section')
-      section1.classList.add('center-content');
-      mainElem.appendChild(section1);
+      let sectionElem= document.creatElement('section')
+      sectionElem.className= 'center-content'
+      mainElem.appendChild(sectionElem)
 
-      // 4
       let pElem= document.createElement('p');
       pElem.innerHTML= 'Hoje está sendo um dia daqueles. É o famoso aprendizado doloroso.';
-      section1.appendChild(pElem);
+      sectionElem.appendChild(pElem);
 
-      // 5
-      let sectionElem2= document.createElement('section');
-      sectionElem2.classList.add('right-content');
-      mainElem.appendChild(sectionElem2);
-
-      // 6
       let sectionElem3= document.createElement('section');
       sectionElem3.className= 'right-content';
       mainElem.appendChild(sectionElem3);
 
-      // 7
+      let sectionElem2= document.createElement('section');
+      sectionElem.className= 'right-content';
+      mainElem.appendChild(sectionElem2);
+
       let image= document.createElement('img');
-      image.classList.add('small-image');
+      image.className= 'small-image';
       img.src= 'https://picsum.photos/200';
       sectionElem3.appendChild(image);
 
-      // 8
       let list= document.createElement('ul');
       sectionElem2.appendChild(list)
       let array= ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
       for (let numeros in array){
-        let li= document.createElement('li');
-        li.innerHTML = array[numeros];
+        let li= document.createElement(li);
         list.appendChild(li);
       }
 
-      // 9
       for (let index =1; index <= 3; index +=1){
-        let h3= document.createElement('h3');
+        const h3= document.createElement('h3');
         h3.innerHTML= 'texto' + index;
         mainElem.appendChild(h3);
       }
@@ -118,6 +106,7 @@
 
       let descri= document.querySelector('h3');
       title.className= 'description';
+      
     </script>
   </body>
 </html>
