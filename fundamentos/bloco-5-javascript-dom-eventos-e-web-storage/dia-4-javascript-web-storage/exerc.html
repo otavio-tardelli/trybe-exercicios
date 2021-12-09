@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Leitor</title>
+  <style>
+  
+  </style>
+</head>
+
+<body id="mudar">
+  <section class="preferences">
+
+    <section class="options">
+      <label> Cor de fundo</label>
+      <button id="background"> COR </button>
+    </section>
+
+    <section  class="options">
+      <span>Cor da fonte</span>
+      <button id="fontcolor">cor da fonte</button>
+    </section>
+
+    <section  class="options">
+      <span>Tamanho da fonte</span>
+      <button id="fontsize">tamanho</button>
+    </section>
+
+    <section class="options">
+      <span>Tipo da fonte</span>
+      <button id="fontfamily" >fonte</button>
+    </section>
+    
+    <section class="options">
+      <span>Espaçamento</span>
+      <button id="space" >espaço</button>
+    </section>
+  </section>
+  <main>
+
+    <section class="title">
+      <h1>Lorem Ipsum</h1>
+    </section>
+
+    <article id="ui">
+      <p class="paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet tellus purus. Sed blandit nec duit eu lacinia. Vestibulum tincidunt hendrerit turpis, vitae hendrerit ipsum mollis at. 
+      </p>
+      <p class="paragraph">
+        Proin imperdiet velit enim, eget vestibulum urna commodo non. Cras tincidunt nisl in venenatis maximus. Donec sit amet sem at quam suscipit pharetra. 
+      </p>
+      <p class="paragraph">
+        Vestibulum blandit, diam at lacinia hendrerit, augue velit varius turpis, at imperdiet lacus tellus vel felis. Quisque velit magna, faucibus sit amet sem consequat, fermentum ultrices lorem. 
+      </p>
+      
+    </article>
+  </main>  
+  <script>
+
+  
+
+    function changeBackground(){
+      document.querySelector('#background');
+      document.body.style.backgroundColor= 'red';
+    }
+    background.addEventListener('click', changeBackground)
+
+    function changeFontColor(){
+      document.getElementById("ui").style.color = "white";
+    }
+    fontcolor.addEventListener('click', changeFontColor)
+
+    function changeFontSize(){
+      document.getElementById("ui").style.fontSize= '150%';
+    }
+    fontsize.addEventListener('click', changeFontSize)
+
+    function changeFontFamily(){
+      document.getElementById("ui").style.fontFamily= "sans-serif";
+    }
+    fontfamily.addEventListener('click', changeFontFamily)
+    
+    function changeSpace(){
+      document.getElementById("ui").style.lineHeight= "1.5";
+    }
+    space.addEventListener('click', changeSpace)
+
+
+  </script>
+
+</body>
+</html>
