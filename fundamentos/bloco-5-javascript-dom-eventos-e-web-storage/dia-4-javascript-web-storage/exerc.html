@@ -59,13 +59,20 @@
   </main>  
   <script>
 
-  
+    function abrir (){
+      let aloalo= localStorage.getItem('aloalo')
+      document.getElementById('mudar').style.backgroundColor= aloalo;
+    
+    }
+    abrir()
+    
 
     function changeBackground(){
-      document.querySelector('#background');
-      document.body.style.backgroundColor= 'red';
+      document.getElementById("mudar").style.backgroundColor = "blue";
+      localStorage.setItem('aloalo','blue');
     }
     background.addEventListener('click', changeBackground)
+
 
     function changeFontColor(){
       document.getElementById("ui").style.color = "white";
