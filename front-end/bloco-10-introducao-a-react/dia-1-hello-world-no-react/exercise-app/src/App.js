@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
 const Task = (value) => {
   return (
@@ -7,10 +7,14 @@ const Task = (value) => {
   );
 }
 
-function App() {
-  return (
-    Task('Hello World!')
-  );
+const array = ['estudar', 'fazer exercício', 'dormir', 'comer'];
+
+class App extends React.Component {
+  render() {
+    return (
+      <ul> { array.map(element => Task(element)) } </ul>
+    );
+  }
 }
 
 export default App;
