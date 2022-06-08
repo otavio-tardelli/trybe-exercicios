@@ -8,19 +8,19 @@ async function personagens() {
     strings.forEach(string => console.log(string));
 }
 
-async function simpsonsById(id) {
-  const fileContent = await fs.readFile('./simpsons.json', 'utf-8');
+// async function simpsonsById(id) {
+//   const fileContent = await fs.readFile('./simpsons.json', 'utf-8');
 
-  const simpsons = JSON.parse(fileContent);
+//   const simpsons = JSON.parse(fileContent);
 
-  const escolha = simpsons.find(simpson => Number(simpson.id) === id);
+//   const escolha = simpsons.find(simpson => Number(simpson.id) === id);
 
-  if (!escolha) {
-    throw new Error('id não encontrado');
-  }
+//   if (!escolha) {
+//     throw new Error('id não encontrado');
+//   }
 
-  return escolha;
-}
+//   return escolha;
+// }
 
 // async function filtrarSimpson() {
 //   const fileContent = await fs.readFile('./simpsons.json', 'utf-8');
@@ -32,20 +32,21 @@ async function simpsonsById(id) {
 //   await fs.writeFile('./simpsons.json', JSON.stringify(newArray));
 // }
 
-async function familiaSimpsons() {
-  const fileContent = await fs.readFile('./simpsons.json', 'utf-8');
+async function createSimpsonsFamily() {
+  const fileContent = await fs
+    .readFile('./simpsons.json', 'utf-8');
 
   const simpsons = JSON.parse(fileContent);
 
-  const familiaId =[1, 2, 3, 4];
-  const familia = simpsons
-    .filter((simpson) => familiaId.includes(Number(simpson.id)))
+  const familyIds = [1, 2, 3, 4];
+  const simpsonsFamily = simpsons
+    .filter((simpson) => familyIds.includes(Number(simpson.id)));
 
-  await fs.writeFile('./familiaSimpsons.json', JSON.stringify()) 
-}
+  await fs.writeFile('./simpsonsFamily.json', JSON.stringify(simpsonsFamily));
+  }
 
 async function main() {
-  const simpson = await simpsonsById(5);;
+  const simpson = await createSimpsonsFamily();
   console.log(simpson);
 }
 
