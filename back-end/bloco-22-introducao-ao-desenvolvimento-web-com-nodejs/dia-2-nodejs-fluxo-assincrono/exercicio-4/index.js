@@ -32,6 +32,18 @@ async function simpsonsById(id) {
 //   await fs.writeFile('./simpsons.json', JSON.stringify(newArray));
 // }
 
+async function familiaSimpsons() {
+  const fileContent = await fs.readFile('./simpsons.json', 'utf-8');
+
+  const simpsons = JSON.parse(fileContent);
+
+  const familiaId =[1, 2, 3, 4];
+  const familia = simpsons
+    .filter((simpson) => familiaId.includes(Number(simpson.id)))
+
+  await fs.writeFile('./familiaSimpsons.json', JSON.stringify()) 
+}
+
 async function main() {
   const simpson = await simpsonsById(5);;
   console.log(simpson);
