@@ -21,7 +21,7 @@ const getByAuthorId = async () => {
   }));
 }
 
-const getById = async () => {
+const getById = async (id) => {
   const query = 'SELECT * FROM model_example.books WHERE id=?;';
 
   const [books] = await connection.execute(query, [id]);
